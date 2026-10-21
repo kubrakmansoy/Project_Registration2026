@@ -1,8 +1,8 @@
 namespace Project_Registration2026
 {
-    public partial class Form1 : Form
+    public partial class frmCourseRegistration : Form
     {
-        public Form1()
+        public frmCourseRegistration()
         {
             InitializeComponent();
         }

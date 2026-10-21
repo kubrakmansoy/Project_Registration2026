@@ -1,6 +1,6 @@
 ﻿namespace Project_Registration2026
 {
-    partial class Form1
+    partial class frmCourseRegistration
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            SuspendLayout();
+            // 
+            // frmCourseRegistration
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Text = "Form1";
+            ClientSize = new Size(782, 453);
+            Name = "frmCourseRegistration";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Course Registration";
+            Load += this.frmCourseRegistration_Load;
+            ResumeLayout(false);
         }
 
         #endregion
