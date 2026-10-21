@@ -11,5 +11,20 @@ namespace Project_Registration2026
         {
 
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Registration completed.");
+        }
+
+        private void pnlBottom_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

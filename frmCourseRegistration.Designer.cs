@@ -39,15 +39,18 @@
             cboDepartment = new ComboBox();
             tabCourses = new TabPage();
             flpCourses = new FlowLayoutPanel();
-            chkVisualProgramming = new CheckBox();
-            chkArtificialIntelligence = new CheckBox();
-            chkInternetProgramming = new CheckBox();
             chkCyberSecurity = new CheckBox();
+            chkArtificialIntelligence = new CheckBox();
+            chkVisualProgramming = new CheckBox();
+            chkInternetProgramming = new CheckBox();
+            pnlBottom = new Panel();
+            btnRegister = new Button();
             tabMain.SuspendLayout();
             tabStu.SuspendLayout();
             tlpStudent.SuspendLayout();
             tabCourses.SuspendLayout();
             flpCourses.SuspendLayout();
+            pnlBottom.SuspendLayout();
             SuspendLayout();
             // 
             // tabMain
@@ -164,10 +167,10 @@
             // flpCourses
             // 
             flpCourses.AutoScroll = true;
-            flpCourses.Controls.Add(chkVisualProgramming);
-            flpCourses.Controls.Add(chkArtificialIntelligence);
-            flpCourses.Controls.Add(chkInternetProgramming);
             flpCourses.Controls.Add(chkCyberSecurity);
+            flpCourses.Controls.Add(chkArtificialIntelligence);
+            flpCourses.Controls.Add(chkVisualProgramming);
+            flpCourses.Controls.Add(chkInternetProgramming);
             flpCourses.Dock = DockStyle.Fill;
             flpCourses.Location = new Point(3, 3);
             flpCourses.Name = "flpCourses";
@@ -175,43 +178,10 @@
             flpCourses.TabIndex = 0;
             flpCourses.Paint += flpCourses_Paint;
             // 
-            // chkVisualProgramming
-            // 
-            chkVisualProgramming.AutoSize = true;
-            chkVisualProgramming.Location = new Point(10, 10);
-            chkVisualProgramming.Margin = new Padding(10);
-            chkVisualProgramming.Name = "chkVisualProgramming";
-            chkVisualProgramming.Size = new Size(165, 24);
-            chkVisualProgramming.TabIndex = 0;
-            chkVisualProgramming.Text = "Visual Programming";
-            chkVisualProgramming.UseVisualStyleBackColor = true;
-            // 
-            // chkArtificialIntelligence
-            // 
-            chkArtificialIntelligence.AutoSize = true;
-            chkArtificialIntelligence.Location = new Point(195, 10);
-            chkArtificialIntelligence.Margin = new Padding(10);
-            chkArtificialIntelligence.Name = "chkArtificialIntelligence";
-            chkArtificialIntelligence.Size = new Size(168, 24);
-            chkArtificialIntelligence.TabIndex = 1;
-            chkArtificialIntelligence.Text = "Artificial Intelligence";
-            chkArtificialIntelligence.UseVisualStyleBackColor = true;
-            // 
-            // chkInternetProgramming
-            // 
-            chkInternetProgramming.AutoSize = true;
-            chkInternetProgramming.Location = new Point(383, 10);
-            chkInternetProgramming.Margin = new Padding(10);
-            chkInternetProgramming.Name = "chkInternetProgramming";
-            chkInternetProgramming.Size = new Size(177, 24);
-            chkInternetProgramming.TabIndex = 2;
-            chkInternetProgramming.Text = "Internet Programming";
-            chkInternetProgramming.UseVisualStyleBackColor = true;
-            // 
             // chkCyberSecurity
             // 
             chkCyberSecurity.AutoSize = true;
-            chkCyberSecurity.Location = new Point(580, 10);
+            chkCyberSecurity.Location = new Point(10, 10);
             chkCyberSecurity.Margin = new Padding(10);
             chkCyberSecurity.Name = "chkCyberSecurity";
             chkCyberSecurity.Size = new Size(125, 24);
@@ -219,12 +189,68 @@
             chkCyberSecurity.Text = "Cyber Security";
             chkCyberSecurity.UseVisualStyleBackColor = true;
             // 
+            // chkArtificialIntelligence
+            // 
+            chkArtificialIntelligence.AutoSize = true;
+            chkArtificialIntelligence.Location = new Point(155, 10);
+            chkArtificialIntelligence.Margin = new Padding(10);
+            chkArtificialIntelligence.Name = "chkArtificialIntelligence";
+            chkArtificialIntelligence.Size = new Size(168, 24);
+            chkArtificialIntelligence.TabIndex = 1;
+            chkArtificialIntelligence.Text = "Artificial Intelligence";
+            chkArtificialIntelligence.UseVisualStyleBackColor = true;
+            // 
+            // chkVisualProgramming
+            // 
+            chkVisualProgramming.AutoSize = true;
+            chkVisualProgramming.Location = new Point(343, 10);
+            chkVisualProgramming.Margin = new Padding(10);
+            chkVisualProgramming.Name = "chkVisualProgramming";
+            chkVisualProgramming.Size = new Size(165, 24);
+            chkVisualProgramming.TabIndex = 0;
+            chkVisualProgramming.Text = "Visual Programming";
+            chkVisualProgramming.UseVisualStyleBackColor = true;
+            // 
+            // chkInternetProgramming
+            // 
+            chkInternetProgramming.AutoSize = true;
+            chkInternetProgramming.Location = new Point(528, 10);
+            chkInternetProgramming.Margin = new Padding(10);
+            chkInternetProgramming.Name = "chkInternetProgramming";
+            chkInternetProgramming.Size = new Size(177, 24);
+            chkInternetProgramming.TabIndex = 2;
+            chkInternetProgramming.Text = "Internet Programming";
+            chkInternetProgramming.UseVisualStyleBackColor = true;
+            // 
+            // pnlBottom
+            // 
+            pnlBottom.Controls.Add(btnRegister);
+            pnlBottom.Dock = DockStyle.Bottom;
+            pnlBottom.Location = new Point(0, 388);
+            pnlBottom.Name = "pnlBottom";
+            pnlBottom.Size = new Size(782, 65);
+            pnlBottom.TabIndex = 4;
+            pnlBottom.Paint += pnlBottom_Paint;
+            // 
+            // btnRegister
+            // 
+            btnRegister.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnRegister.Location = new Point(647, 15);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(120, 35);
+            btnRegister.TabIndex = 0;
+            btnRegister.Text = "Register";
+            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
+            // 
             // frmCourseRegistration
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(782, 453);
+            Controls.Add(pnlBottom);
             Controls.Add(tabMain);
+            MinimumSize = new Size(400, 320);
             Name = "frmCourseRegistration";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Course Registration";
@@ -235,6 +261,7 @@
             tabCourses.ResumeLayout(false);
             flpCourses.ResumeLayout(false);
             flpCourses.PerformLayout();
+            pnlBottom.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -255,6 +282,8 @@
         private CheckBox chkArtificialIntelligence;
         private CheckBox chkInternetProgramming;
         private CheckBox chkCyberSecurity;
+        private Panel pnlBottom;
+        private Button btnRegister;
         //private FlowLayoutPanel flowLayoutPanel1;
     }
 }
