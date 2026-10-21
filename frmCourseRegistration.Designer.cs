@@ -32,8 +32,17 @@
             tabStu = new TabPage();
             tabCourses = new TabPage();
             tlpStudent = new TableLayoutPanel();
+            lblName = new Label();
+            lblStudentNo = new Label();
+            lblDepartment = new Label();
+            txtName = new TextBox();
+            txtStudentNo = new TextBox();
+            cboDepartment = new ComboBox();
+            
             tabMain.SuspendLayout();
             tabStu.SuspendLayout();
+            tabCourses.SuspendLayout();
+            tlpStudent.SuspendLayout();
             SuspendLayout();
             // 
             // tabMain
@@ -46,7 +55,7 @@
             tabMain.SelectedIndex = 0;
             tabMain.Size = new Size(782, 453);
             tabMain.TabIndex = 0;
-            tabMain.SelectedIndexChanged += this.tabMain_SelectedIndexChanged;
+            ////tabMain.SelectedIndexChanged += this.tabMain_SelectedIndexChanged;
             // 
             // tabStu
             // 
@@ -61,6 +70,7 @@
             // 
             // tabCourses
             // 
+            
             tabCourses.Location = new Point(4, 29);
             tabCourses.Name = "tabCourses";
             tabCourses.Padding = new Padding(3);
@@ -74,6 +84,12 @@
             tlpStudent.ColumnCount = 2;
             tlpStudent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
             tlpStudent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tlpStudent.Controls.Add(lblName, 0, 0);
+            tlpStudent.Controls.Add(lblStudentNo, 0, 1);
+            tlpStudent.Controls.Add(lblDepartment, 0, 2);
+            tlpStudent.Controls.Add(txtName, 1, 0);
+            tlpStudent.Controls.Add(txtStudentNo, 1, 1);
+            tlpStudent.Controls.Add(cboDepartment, 1, 2);
             tlpStudent.Dock = DockStyle.Fill;
             tlpStudent.Location = new Point(3, 3);
             tlpStudent.Name = "tlpStudent";
@@ -84,7 +100,65 @@
             tlpStudent.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tlpStudent.Size = new Size(768, 414);
             tlpStudent.TabIndex = 0;
-            tlpStudent.Paint += this.tlpStudent_Paint;
+            ////tlpStudent.Paint += this.tlpStudent_Paint;
+            // 
+            // lblName
+            // 
+            lblName.Anchor = AnchorStyles.Left;
+            lblName.AutoSize = true;
+            lblName.Location = new Point(23, 72);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(52, 20);
+            lblName.TabIndex = 0;
+            lblName.Text = "Name:";
+            // 
+            // lblStudentNo
+            // 
+            lblStudentNo.Anchor = AnchorStyles.Left;
+            lblStudentNo.AutoSize = true;
+            lblStudentNo.Location = new Point(23, 196);
+            lblStudentNo.Name = "lblStudentNo";
+            lblStudentNo.Size = new Size(87, 20);
+            lblStudentNo.TabIndex = 1;
+            lblStudentNo.Text = "Student No:";
+            // 
+            // lblDepartment
+            // 
+            lblDepartment.Anchor = AnchorStyles.Left;
+            lblDepartment.AutoSize = true;
+            lblDepartment.Location = new Point(23, 321);
+            lblDepartment.Name = "lblDepartment";
+            lblDepartment.Size = new Size(95, 20);
+            lblDepartment.TabIndex = 2;
+            lblDepartment.Text = "Department:.";
+            // 
+            // txtName
+            // 
+            txtName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtName.Location = new Point(241, 68);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(504, 27);
+            txtName.TabIndex = 3;
+            // 
+            // txtStudentNo
+            // 
+            txtStudentNo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtStudentNo.Location = new Point(241, 192);
+            txtStudentNo.Name = "txtStudentNo";
+            txtStudentNo.Size = new Size(504, 27);
+            txtStudentNo.TabIndex = 4;
+            // 
+            // cboDepartment
+            // 
+            cboDepartment.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cboDepartment.FormattingEnabled = true;
+            cboDepartment.Items.AddRange(new object[] { "Computer Engineering", "Software Engineering", "Electrical and Electronics Engineering" });
+            cboDepartment.Location = new Point(241, 313);
+            cboDepartment.Name = "cboDepartment";
+            cboDepartment.Size = new Size(504, 28);
+            cboDepartment.TabIndex = 5;
+            // 
+            
             // 
             // frmCourseRegistration
             // 
@@ -95,9 +169,12 @@
             Name = "frmCourseRegistration";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Course Registration";
-            Load += this.frmCourseRegistration_Load;
+            ////Load += this.frmCourseRegistration_Load;
             tabMain.ResumeLayout(false);
             tabStu.ResumeLayout(false);
+            tabCourses.ResumeLayout(false);
+            tlpStudent.ResumeLayout(false);
+            tlpStudent.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -107,5 +184,12 @@
         private TabPage tabStu;
         private TabPage tabCourses;
         private TableLayoutPanel tlpStudent;
+        private Label lblName;
+        private Label lblStudentNo;
+        private Label lblDepartment;
+        private TextBox txtName;
+        private TextBox txtStudentNo;
+        private ComboBox cboDepartment;
+        //private FlowLayoutPanel flowLayoutPanel1;
     }
 }
