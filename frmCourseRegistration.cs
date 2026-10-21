@@ -6,5 +6,10 @@ namespace Project_Registration2026
         {
             InitializeComponent();
         }
+
+        private void flpCourses_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
