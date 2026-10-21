@@ -31,7 +31,9 @@
             tabMain = new TabControl();
             tabStu = new TabPage();
             tabCourses = new TabPage();
+            tlpStudent = new TableLayoutPanel();
             tabMain.SuspendLayout();
+            tabStu.SuspendLayout();
             SuspendLayout();
             // 
             // tabMain
@@ -48,6 +50,7 @@
             // 
             // tabStu
             // 
+            tabStu.Controls.Add(tlpStudent);
             tabStu.Location = new Point(4, 29);
             tabStu.Name = "tabStu";
             tabStu.Padding = new Padding(3);
@@ -66,6 +69,23 @@
             tabCourses.Text = "Course Selection";
             tabCourses.UseVisualStyleBackColor = true;
             // 
+            // tlpStudent
+            // 
+            tlpStudent.ColumnCount = 2;
+            tlpStudent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tlpStudent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tlpStudent.Dock = DockStyle.Fill;
+            tlpStudent.Location = new Point(3, 3);
+            tlpStudent.Name = "tlpStudent";
+            tlpStudent.Padding = new Padding(20);
+            tlpStudent.RowCount = 3;
+            tlpStudent.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tlpStudent.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tlpStudent.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tlpStudent.Size = new Size(768, 414);
+            tlpStudent.TabIndex = 0;
+            tlpStudent.Paint += this.tlpStudent_Paint;
+            // 
             // frmCourseRegistration
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -77,6 +97,7 @@
             Text = "Course Registration";
             Load += this.frmCourseRegistration_Load;
             tabMain.ResumeLayout(false);
+            tabStu.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -85,5 +106,6 @@
         private TabControl tabMain;
         private TabPage tabStu;
         private TabPage tabCourses;
+        private TableLayoutPanel tlpStudent;
     }
 }
